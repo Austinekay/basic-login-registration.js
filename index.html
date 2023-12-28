@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="loginUsername">Username:</label>
+        <input type="text" id="loginUsername" name="loginUsername" required />
+
+        <label for="loginPassword">Password:</label>
+        <input
+          type="password"
+          id="loginPassword"
+          name="loginPassword"
+          required
+        />
+
+        <button type="button" onclick="login()">Login</button>
+      </form>
+
+      <hr />
+
+      <h2>Register</h2>
+      <form id="registerForm">
+        <label for="registerUsername">Username:</label>
+        <input
+          type="text"
+          id="registerUsername"
+          name="registerUsername"
+          required
+        />
+
+        <label for="registerPassword">Password:</label>
+        <input
+          type="password"
+          id="registerPassword"
+          name="registerPassword"
+          required
+        />
+
+        <button type="button" onclick="register()">Register</button>
+      </form>
+    </div>
+
+    <script>
+      function login() {
+        var username = document.getElementById("loginUsername").value;
+        var password = document.getElementById("loginPassword").value;
+
+        // Add your authentication logic here
+        console.log(
+          "Login clicked. Username: " + username + ", Password: " + password
+        );
+      }
+
+      function register() {
+        var username = document.getElementById("registerUsername").value;
+        var password = document.getElementById("registerPassword").value;
+
+        // Add your registration logic here
+        console.log(
+          "Register clicked. Username: " + username + ", Password: " + password
+        );
+      }
+    </script>
+  </body>
+</html>
